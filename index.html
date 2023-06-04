@@ -1,0 +1,978 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="portfolio">
+    <meta name="author" content="Devcrud">
+    <title>PORTFOLIO</title>
+    <!-- font icons -->
+    <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
+    <!-- Bootstrap + portfolio main styles -->
+	<link rel="stylesheet" href="assets/css/portfolio.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,900,900i" rel="stylesheet">
+
+    <style>
+   body {
+  overflow-x: hidden;
+}
+        /* button shake */
+        @keyframes shake {
+            0% { transform: translateY(0); }
+    25% { transform: translateY(-5px) rotate(-5deg); }
+    50% { transform: translateY(5px) rotate(5deg); }
+    75% { transform: translateY(-5px) rotate(-5deg); }
+    100% { transform: translateY(0); }
+}
+
+.shake {
+    animation: shake 0.5s infinite;
+}
+/* picture zoom */
+.image-container {
+  overflow: hidden;
+  position: relative;
+  width: 300px;
+  height: 222px;
+}
+
+.zoom-effect {
+  transition: transform 0.3s;
+}
+
+.zoom-effect:hover {
+  transform: scale(1.2);
+  filter: brightness(70%);
+}
+/* div zoom effect */
+.zoom-effect2 {
+  transition: transform 0.3s;
+}
+
+.zoom-effect2:hover {
+  transform: scale(1.1);
+}
+
+/* shake on hover */
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px) rotate(-5deg); }
+    50% { transform: translateX(5px) rotate(5deg); }
+    75% { transform: translateX(-5px) rotate(-5deg); }
+    100% { transform: translateX(0); }
+}
+
+.shake-on-hover:hover {
+    animation: shake 0.5s ease-in-out;
+}
+
+/* type from left */
+.typing-animation {
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 0.15em solid #ffffff; /* Adjust the color and width of the blinking cursor */
+    animation: typing 2s steps(30, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink-caret {
+    from, to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: #ffffff; /* Adjust the color of the blinking cursor */
+    }
+}
+
+/* section hover */
+/* Add this code to your CSS file */
+/* Add this code to your CSS file */
+/* Add this code to your CSS file */
+.section {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+.section.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* text color change when hover in porttfolio  */
+.column {
+      background-color: #f8f9fa;
+      border-radius: 5px;
+      padding: 10px;
+      text-align: center;
+      margin-bottom: 10px;
+      transition: background-color 0.3s;
+    }
+    
+    .column p {
+      color: #4e32a8;
+      font-family: cursive;
+      font-size: 20px;
+    }
+    
+    .column:hover {
+      background-color: #f39f67; /* Change the background color to your desired hover color */
+    }
+    /* text blink */
+    @keyframes blink-animation {
+  0% {
+    color: #4e32a8; /* Initial color */
+  }
+  50% {
+    color: yellowgreen; /* Color during blinking */
+  }
+  100% {
+    color: #4e32a8; /* Initial color */
+  }
+}
+
+.blink {
+  animation: blink-animation 0.3s linear infinite;
+}
+
+/* back to top  */
+#button {
+  display: inline-block;
+  background-color: #4e32a8;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 4px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transition: background-color .3s, 
+    opacity .5s, visibility .5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+}
+#button::after {
+  content: "\f077";
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 2em;
+  line-height: 50px;
+  color: #fff;
+}
+#button:hover {
+  cursor: pointer;
+  background-color: #333;
+}
+#button:active {
+  background-color: #555;
+}
+#button.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Styles for the content section */
+
+.content {
+  width: 77%;
+  margin: 50px auto;
+  font-family: 'Merriweather', serif;
+  font-size: 17px;
+  color: #6c767a;
+  line-height: 1.9;
+}
+@media (min-width: 500px) {
+  .content {
+    width: 43%;
+  }
+  #button {
+    margin: 30px;
+  }
+}
+.content h1 {
+  margin-bottom: -10px;
+  color: #03a9f4;
+  line-height: 1.5;
+}
+.content h3 {
+  font-style: italic;
+  color: #96a2a7;
+}
+
+</style>
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+
+    <!-- Page Navbar -->
+    <nav class="custom-navbar " data-spy="affix" data-offset-top="20">
+        <div class="container">
+            <a class="logo" href="#">Shanzay</a>         
+            <ul class="nav">
+                <li class="item">
+                    <a class="link" href="#home">Home</a>
+                </li>
+                <li class="item">
+                    <a class="link" href="#about">About</a>
+                </li>
+                <li class="item">
+                    <a class="link" href="#portfolio">Portfolio</a>
+                </li>
+                <!-- <li class="item">
+                    <a class="link" href="#testmonial">Testmonial</a>
+                </li> -->
+                <li class="item">
+                    <a class="link" href="#blog">Blog</a>
+                </li>
+                <li class="item">
+                    <a class="link" href="#contact">Contact</a>
+                </li>
+                <!-- <li class="item ml-md-3">
+                    <a href="components.html" class="btn btn-primary">Components</a>
+                </li> -->
+            </ul>
+            <a href="javascript:void(0)" id="nav-toggle" class="hamburger hamburger--elastic">
+                <div class="hamburger-box">
+                  <div class="hamburger-inner"></div>
+                </div>
+            </a>
+        </div>          
+    </nav><!-- End of Page Navbar -->
+
+    <!-- page header -->
+    <header id="home" class="header">
+        <div class="overlay"></div>
+        <div class="header-content container">
+            <h1 class="header-title">
+                <span class="up shake-on-hover">Hi! I am</span>
+                <span class="down shake-on-hover typing-animation">Shanzay Tariq</span>
+            </h1>
+            <br>
+            <p class="header-subtitle shake-on-hover">Full Stack Developer</p>            
+
+            <!-- <button class="btn btn-primary shake-on-hover" ><a href="#about" style="color: white;">Let's begin</a></button> -->
+        </div>              
+    </header><!-- end of page header -->
+
+
+<!-- scrollToTopBtn -->
+<!-- Back to top button -->
+<a id="button"></a>
+
+
+    <!-- about section -->
+    <section class="section pt-0" id="about">
+        <!-- container -->
+        <div class="container text-center">
+            <!-- about wrapper -->
+            <div class="about">
+                <div class="about-img-holder">
+                    <img src="assets/imgs/girl1.png" class="about-img" alt="img">
+                </div>
+                <div class="about-caption">
+                    <p class="section-subtitle">Who Am I ?</p>
+                    <h2 class="section-title mb-3">About Me</h2>
+                    <p id="blink-text">
+                        I am a web developer with professional degree in technologies.
+                         I have my plans at hands to serve all the niches of Web Development
+                          world. I am confident of my websites enough to say that those are
+                           completely in vogue but I am always open to the new opportunities
+                            as I am never satisfied with just to build the ideas. Instead, I
+                             shape them into reality. <br>
+                             <br>
+                             I create magnetic online experiences 
+                             that not only catch the eye but also drive customer engagement.
+                              With a deep understanding of user psychology and cutting-edge
+                               design techniques, I craft websites that effortlessly captivate
+                                and convert visitors into loyal clients. Let's embark on a digital
+                                 journey together and watch your business soar to new heights.
+                    </p>
+                    <!-- <button class="btn-rounded btn btn-outline-primary mt-4">Download CV</button> -->
+                </div>              
+            </div><!-- end of about wrapper -->
+        </div><!-- end of container -->
+    </section> <!-- end of about section -->
+
+
+  <!-- section -->
+    <section class="section-sm bg-primary">
+        <!-- container -->
+        <div class="container text-center text-sm-left">
+            <!-- row -->
+            <div class="row align-items-center ">
+                <div class="col-md-4 mb-4 mb-md-0 ">
+                    <h6 class="title text-light">Want to work with me?</h6>
+                    <p class="m-0 text-light">Always feel Free to Contact me</p>
+                </div>
+                <div class="col-md-4 ">
+                    <button class="btn btn-lg my-font btn-light rounded shake "> <a href="#contact"> Hire Me</a></button>
+                </div>
+
+                <!-- bomb shaking -->
+
+                <!-- <div class="col-sm-4 col-md-3 fa-3x shake">
+                    <i class="fa-solid fa-bomb fa-shake"></i>
+                </div> -->
+
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </section> <!-- end of section -->
+
+
+    <!-- service section -->
+    <section class="section" id="service">
+        <div class="container text-center">
+            <!-- <p class="section-subtitle">What I Do ?</p> -->
+            <h6 class="section-title mb-2">Services</h6>
+            <p class="section-subtitle">I craft websites that are</p>
+
+            <!-- row -->
+            <div class="row">
+                <div class="col-md-6 col-lg-3" >
+                    <div class="service-card" >
+                        <div class="body" >
+                            <div id="animation"></div>
+                            <h6 class="title "  style="height: 10px;" >Fast</h6>
+                            <p class="subtitle">
+                                <!-- My websites are designed to leave a lasting impression with their lightning-fast performance.  -->
+                                From swift load times to seamless navigation, I ensure that users can access information in the blink of an eye.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card">
+                        <div class="body">
+                            <div id="animation2"></div>
+                            <h6 class="title" style="height: 10px;" >Responsive</h6>
+                            <p class="subtitle">
+                                <!-- Experience the power of responsiveness with my cutting-edge websites.  -->
+                                Built with adaptability in mind, my designs adjust to any screen size, from desktops to tablets and smartphones. 
+                                <!-- No matter the device, users will enjoy a flawless browsing experience with content that fits perfectly on their screens -->
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card">
+                        <div class="body">
+                            <div id="animation3"></div>
+                            <h6 class="title" style="height: 10px;" >User-friendly</h6>
+                            <p class="subtitle">
+                                I weave intuitive interfaces and seamless interactions into every pixel, ensuring a magical journey for your visitors. 
+                                <!-- With a touch of wizardry, your content becomes a joy to explore, creating an unforgettable experience for your audience -->
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card">
+                        <div class="body">
+                            <div id="animation4"></div>
+                            <h6 class="title" style="height: 10px;" >High Quality Content</h6>
+                            <p class="subtitle">
+                                I specialize in crafting websites that showcase top-notch content, tailored to meet the needs of your audience. 
+                                <!-- With meticulous attention to detail and a commitment to delivering valuable information, my websites leave a lasting impression on visitors. -->
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+            </div><!-- end of row -->
+        </div>
+    </section><!-- end of service section -->
+
+   <!-- portfolio section -->
+<section class="section active" id="portfolio">
+    <div class="container text-center">
+        <!-- <p class="section-subtitle">What I Do ?</p> -->
+        <h6 class="section-title mb-2">Portfolio</h6>
+        <p class="section-subtitle mb-4">Showcasing Website Portfolio</p>
+
+        <!-- 4 columns -->
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-2">
+                    <a class="link active" href="#" onclick="showDiv('pets, marketing, websolution, restaurant'); return false;">
+                        <div class="column">
+                            <p class="font-weight-normal" style="color: #4e32a8; font-family: cursive; font-size: 15px;">All</p>
+                        </div>
+                    </a>
+                </div>
+        
+                <div class="col-sm-2">
+                    <a class="link" href="#pets" onclick="showDiv('pets'); return false;">
+                        <div class="column">
+                            <p class="font-weight-normal" style="color: #4e32a8; font-family: cursive; font-size: 15px;">Community/<br>Social Networking</p>
+                        </div>
+                    </a>
+                </div>
+        
+                <div class="col-sm-2">
+                    <a class="link" href="#marketing" onclick="showDiv('marketing'); return false;">
+                        <div class="column">
+                            <p class="font-weight-normal" style="color: #4e32a8; font-family: cursive; font-size: 15px;">Business/<br>Corporate</p>
+                        </div>
+                    </a>
+                </div>
+        
+                <div class="col-sm-2">
+                    <a class="link" href="#websolution" onclick="showDiv('websolution'); return false;">
+                        <div class="column">
+                            <p class="font-weight-normal" style="color: #4e32a8; font-family: cursive; font-size: 15px;">Website<br>Builders</p>
+                        </div>
+                    </a>
+                </div>
+        
+                <div class="col-sm-2">
+                    <a class="link" href="#restaurant" onclick="showDiv('restaurant'); return false;">
+                        <div class="column">
+                            <p class="font-weight-normal" style="color: #4e32a8; font-family: cursive; font-size: 15px;">Reservations/<br>Booking</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        
+        <!-- row -->
+        <div class="row" > 
+            <div class="col-md-4" id="pets">
+                <a href="https://shanzay160.github.io/Pets/" target="_blank" class="portfolio-card">
+                    <img src="assets/imgs/folio-1.jpg" class="portfolio-card-img" alt="img">
+                    <span class="portfolio-card-overlay">
+                        <span class="portfolio-card-caption">
+                            <h4>Pets Website</h4>
+                        </span>
+                    </span>
+                </a>
+            </div>
+            
+            <div class="col-md-4" id="marketing">
+                <a href="https://shanzay160.github.io/DigiServices/" target="_blank" class="portfolio-card">
+                    <img class="portfolio-card-img" src="assets/imgs/folio-2.jpg" class="img-responsive rounded" alt="img">
+                    <span class="portfolio-card-overlay">
+                        <span class="portfolio-card-caption">
+                            <h4>Marketing management</h4>
+                        </span>
+                    </span>
+                </a>
+            </div>
+            <div class="col-md-4" id="websolution">
+                <a href="https://shanzay160.github.io/WebTincture/" target="_blank" class="portfolio-card">
+                    <img class="portfolio-card-img" src="assets/imgs/folio-3.jpg" class="img-responsive rounded" alt="img">
+                    <span class="portfolio-card-overlay">
+                        <span class="portfolio-card-caption">
+                            <h4>Website solutions</h4>
+                        </span>
+                    </span>
+                </a>
+            </div>
+</div>
+           <div class="row" > 
+            <div class="col-md-4" id="restaurant">
+                <a href="https://shanzay160.github.io/Restaurant/" target="_blank" class="portfolio-card">
+                    <img src="assets/imgs/folio-4.jpg" class="portfolio-card-img" alt="img">
+                    <span class="portfolio-card-overlay">
+                        <span class="portfolio-card-caption">
+                            <h4>Restaurant</h4>
+                        </span>
+                    </span>
+                </a>
+            </div>
+        </div><!-- end of row -->
+    </div><!-- end of container -->
+</section><!-- end of portfolio section -->
+
+
+    <!-- pricing section -->
+    <!-- <section class="section" id="pricing">
+        <div class="container text-center">
+            <p class="section-subtitle">How Much I Charge ?</p>
+            <h6 class="section-title mb-6">My Pricing</h6> -->
+            <!-- row -->
+            <!-- <div class="pricing-wrapper">
+                <div class="pricing-card">
+                    <div class="pricing-card-header">
+                        <img class="pricing-card-icon" src="assets/imgs/scooter.svg" alt="img">
+                    </div>
+                    <div class="pricing-card-body">
+                        <h6 class="pricing-card-title">Free</h6>
+                        <div class="pricing-card-list">
+                            <p>accusamus reprehenderit</p>
+                            <p>provident dolorem </p>
+                            <p>quos neque</p>
+                            <p>fugiat quibusdam</p>
+                            <p><i class="ti-close"></i></p>
+                            <p><i class="ti-close"></i></p>
+                        </div>
+                    </div>
+                    <div class="pricing-card-footer">
+                        <span>$</span>
+                        <span>0.00/Month</span>
+                    </div>
+                    <a href="#" class="btn btn-primary mt-3 pricing-card-btn">Subscribe</a>
+                </div>
+                <div class="pricing-card">
+                    <div class="pricing-card-header">
+                        <img class="pricing-card-icon" src="assets/imgs/shipped.svg" alt="img">
+                    </div>
+                    <div class="pricing-card-body">
+                        <h6 class="pricing-card-title">Basic</h6>
+                        <div class="pricing-card-list">
+                            <p>accusamus reprehenderit</p>
+                            <p>provident dolorem </p>
+                            <p>quos neque</p>
+                            <p>fugiat quibusdam</p>
+                            <p>accusamus laboriosam</p>
+                            <p><i class="ti-close"></i></p>
+                        </div>
+                    </div>
+                    <div class="pricing-card-footer">
+                        <span>$</span>
+                        <span>9.99/Month</span>
+                    </div>
+                    <a href="#" class="btn btn-primary mt-3 pricing-card-btn">Subscribe</a>
+                </div>
+                <div class="pricing-card">
+                    <div class="pricing-card-header">
+                        <img class="pricing-card-icon" src="assets/imgs/startup.svg" alt="img">
+                    </div>
+                    <div class="pricing-card-body">
+                        <h6 class="pricing-card-title">Premium</h6>
+                        <div class="pricing-card-list">
+                            <p>accusamus reprehenderit</p>
+                            <p>provident dolorem </p>
+                            <p>quos neque</p>
+                            <p>fugiat quibusdam</p>
+                            <p>accusamus laboriosam</p>
+                            <p>inventore omnis</p>
+                        </div>
+                    </div>
+                    <div class="pricing-card-footer">
+                        <span>$</span>
+                        <span>99.9/Month</span>
+                    </div>
+                    <a href="#" class="btn btn-primary mt-3 pricing-card-btn">Subscribe</a>
+                </div> -->
+
+            <!-- </div> -->
+            <!-- end of pricing wrapper -->
+        <!-- </div>  -->
+        <!-- end of container -->
+    <!-- </section> -->
+    <!-- end of pricing section -->
+
+  
+
+    <!-- testimonial section -->
+    <!-- <section class="section" id="testmonial">
+        <div class="container text-center">
+            <p class="section-subtitle">What Think Client About Me ?</p>
+            <h6 class="section-title mb-6">Testmonial</h6> -->
+
+            <!-- row -->
+            <!-- <div class="row">
+                <div class="col-md-6">
+                    <div class="testimonial-card">
+                        <div class="testimonial-card-img-holder">
+                            <img src="assets/imgs/avatar2.jpg" class="testimonial-card-img" alt="img">                           
+                        </div>
+                        <div class="testimonial-card-body">
+                            <p class="testimonial-card-subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque doloribus autem aperiam earum nostrum omnis blanditiis corporis perspiciatis adipisci nihil.</p>
+                            <h6 class="testimonial-card-title">Emily Reb</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="testimonial-card">
+                        <div class="testimonial-card-img-holder">
+                            <img src="assets/imgs/avatar3.jpg" class="testimonial-card-img" alt="img">                        
+                        </div>
+                        <div class="testimonial-card-body">
+                            <p class="testimonial-card-subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque doloribus autem aperiam earum nostrum omnis blanditiis corporis perspiciatis adipisci nihil.</p>
+                            <h6 class="testimonial-card-title">Emily Reb</h6>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+        <!-- </div> -->
+         <!-- end of container -->
+    <!-- </section> -->
+     <!-- end of testimonial section -->
+    
+    <!-- blog section -->
+    <section class="section active" id="blog">
+        <!-- container -->
+        <div class="container text-center">
+            <h6 class="section-title mb-2">Blog</h6>
+            <p class="section-subtitle mb-5">You can read my blogs here</p>
+            <!-- blog-wrapper -->
+            <div class="blog-card">
+                <div class="blog-card-header">
+                    <a href="https://shanzaytariq124.medium.com/how-to-buy-a-dog-check-dogs-health-with-vet-s-advice-avoid-pet-scams-with-pictures-c2ec76f32733" target="_blank">
+                    <img src="assets/imgs/blog-1.jpg" class="blog-card-img zoom-effect" alt="img"  style="width: 300px; height:222px; " >
+                </div>
+                <div class="blog-card-body">
+                    <h5 class="blog-card-title zoom-effect2">How to buy a dog?</h6>
+
+                    <!-- <p class="blog-card-caption">
+                        <a href="#">By: Admin</a>
+                        <a href="#"><i class="ti-heart text-danger"></i> 234</a>
+                        <a href="#"><i class="ti-comment"></i> 123</a>
+                    </p> -->
+                    <p class="zoom-effect2">You might be wondering where and how to buy a dog and get it home. Concerning your love for your darling dog, we’ve covered all the specs to be kept in mind while going to buy a dog... </p>
+
+                    <a href="https://shanzaytariq124.medium.com/how-to-buy-a-dog-check-dogs-health-with-vet-s-advice-avoid-pet-scams-with-pictures-c2ec76f32733" class="blog-card-link zoom-effect2">Read more <i class="ti-angle-double-right"></i></a>
+                </div>
+            </div><!-- end of blog wrapper -->
+
+            <!-- blog-wrapper -->
+            <div class="blog-card">
+                <div class="blog-card-header">
+                    <a href="https://shanzaytariq124.medium.com/nutritionist-reveals-how-much-junk-food-is-safe-for-your-body-10-tips-on-how-can-you-avoid-d0d7775ab847" target="_blank">
+                    <img src="assets/imgs/blog-2.jpg" class="blog-card-img zoom-effect" alt="img"  style="width: 300px; height:222px;">
+                </div>
+                <div class="blog-card-body">
+                    <h5 class="blog-card-title zoom-effect2"> Nutritionist Reveals How Much Junk Food is Safe for Your Body</h6>
+
+                    <!-- <p class="blog-card-caption">
+                        <a href="#">By: Admin</a>
+                        <a href="#"><i class="ti-heart text-danger"></i> 456</a>
+                        <a href="#"><i class="ti-comment"></i> 264</a>
+                    </p> -->
+                    
+                   <p class="zoom-effect2">  Well, I’m not asking you to quit eating your favorite Pepperoni Pizza, water filled in your mouth? mine too.
+                    but I’m here to help you figure out the right amount of junk food for your body according to your age...</p>
+                    <a href="https://shanzaytariq124.medium.com/nutritionist-reveals-how-much-junk-food-is-safe-for-your-body-10-tips-on-how-can-you-avoid-d0d7775ab847" class="blog-card-link zoom-effect2">Read more <i class="ti-angle-double-right"></i></a>
+                </div>
+            </div><!-- end of blog wrapper -->
+
+            <!-- blog-wrapper -->
+            <div class="blog-card">
+                <div class="blog-card-header">
+                    <a href="https://shanzaytariq124.medium.com/grab-dermatologists-revealing-16-beauty-tips-to-look-attractive-naturally-zero-makeup-hacks-to-b956cba831ee" target="_blank">
+                    <img src="assets/imgs/blog-3.jpg" class="blog-card-img zoom-effect" alt="img"  style="width: 300px; height:222px;">
+                </div>
+                <div class="blog-card-body">
+                    <h5 class="blog-card-title zoom-effect2"> Dermatologists revealed 16 Beauty Tips to Look Attractive Naturally</h6>
+
+                    <!-- <p class="blog-card-caption">
+                        <a href="#">By: Admin</a>
+                        <a href="#"><i class="ti-heart text-danger"></i> 456</a>
+                        <a href="#"><i class="ti-comment"></i> 264</a>
+                    </p> -->
+                    
+                <p class="zoom-effect2">  An American Dermatologist in Dermato-Endocrinology (a journal) published the relationship of diet with acne.
+                    He claimed in his "Article" that skin-related problems can be just treated through...</p>
+                    <a href="https://shanzaytariq124.medium.com/grab-dermatologists-revealing-16-beauty-tips-to-look-attractive-naturally-zero-makeup-hacks-to-b956cba831ee" class="blog-card-link zoom-effect2">Read more <i class="ti-angle-double-right"></i></a>
+                </div>
+            </div><!-- end of blog wrapper -->
+
+            <!-- blog-wrapper -->
+            <div class="blog-card">
+                <div class="blog-card-header">
+                    <a href="https://shanzaytariq124.medium.com/augmented-reality-technology-ar-the-future-boss-10-applications-of-ar-4ec731ee0766" target="_blank">
+                        <img src="assets/imgs/blog-4.jpg" class="blog-card-img zoom-effect" alt="img"  style="width: 300px; height:222px;">
+                </div>
+                <div class="blog-card-body">
+                    <h5 class="blog-card-title zoom-effect2"> Augmented Reality Technology (AR)- The Future Boss— 10 Applications of AR</h6>
+
+                    <!-- <p class="blog-card-caption">
+                        <a href="#">By: Admin</a>
+                        <a href="#"><i class="ti-heart text-danger"></i> 456</a>
+                        <a href="#"><i class="ti-comment"></i> 264</a>
+                    </p> -->
+                    
+                 <p class="zoom-effect2">As the Research says that Augmented Reality Technology (AR) has helped kids learn from
+                    AR through different games and toys. In fact, a research study was
+                     conducted in a school to check...</p>
+                    <a href="https://shanzaytariq124.medium.com/augmented-reality-technology-ar-the-future-boss-10-applications-of-ar-4ec731ee0766" class="blog-card-link zoom-effect2">Read more <i class="ti-angle-double-right"></i></a>
+                </div>
+            </div><!-- end of blog wrapper -->
+
+
+        </div><!-- end of container -->
+    </section><!-- end of blog section -->
+
+    <!-- contact section -->
+    <section class="section" id="contact">
+        <div class="container text-center">
+            <p class="section-subtitle" mb-2>Get in touch</p>
+            <h6 class="section-title mb-2">Contact me</h6>
+            <!-- contact form -->
+            <!-- <form action="" class="contact-form col-md-10 col-lg-8 m-auto">
+                <div class="form-row">
+                    <div class="form-group col-sm-6">
+                        <input type="text" size="50" class="form-control" placeholder="Your Name" required>                 
+                    </div>
+                    <div class="form-group col-sm-6">
+                        <input type="email" class="form-control" placeholder="Enter Email"requried>                 
+                    </div>
+                    <div class="form-group col-sm-12">
+                        <textarea name="comment" id="comment" rows="6"   class="form-control" placeholder="Write Something"></textarea>
+                    </div>
+
+                    <div class="form-group col-sm-12 mt-3">
+                        <input type="submit" value="Send Message" class="btn btn-outline-primary rounded">                  
+                    </div>
+                </div>  
+            </form> -->
+            
+            <!-- lotti animation -->
+            <section id="contact" class="contact">
+                <div class="container">
+                    <h6 class="section-title">Click and Say Hi!</h6>
+                    <div class="row justify-content-center">
+                        <div class="col-lg-6 col-md-8 col-sm-10 col-12">
+                            <a href="mailto:shanzaytariq124@gmail.com">
+                                <div id="animation-container"></div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+    <!-- lotti animation ends -->
+
+    <!-- footer -->
+    <div class="container">
+        <footer class="footer">       
+            <p class="mb-0">Shanzay Tariq <script>document.write(new Date().getFullYear())</script></p>
+            <div class="social-links text-right m-auto ml-sm-auto">
+                <!-- <a href="javascript:void(0)" class="link"><i class="ti-twitter-alt"></i></a> -->
+               
+                <a href="https://www.linkedin.com/in/shanzay-tariq29/" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                  </a>
+                  
+                  <a href="https://github.com/Shanzay160" target="_blank">
+                    <i class="fab fa-github"></i>
+                  </a>
+               <a href="https://www.facebook.com/shanzay.tariq.908/" class="link"><i class="ti-facebook"></i></a>
+
+                <!-- <a href="javascript:void(0)" class="link"><i class="ti-google"></i></a> -->
+                <!-- <a href="javascript:void(0)" class="link"><i class="ti-pinterest-alt"></i></a> -->
+                <!-- <a href="javascript:void(0)" class="link"><i class="ti-instagram"></i></a> -->
+                <!-- <a href="javascript:void(0)" class="link"><i class="ti-rss"></i></a> -->
+            </div>
+        </footer>
+    </div> <!-- end of page footer -->
+	
+	<!-- core  -->
+    <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
+    <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
+
+    <!-- bootstrap 3 affix -->
+	<script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
+
+    <!-- portfolio js -->
+    <script src="assets/js/portfolio.js"></script>
+
+    <!-- lotti -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.3/lottie.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.8/lottie.min.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-0RD0BwV2fIeH7OrXurDEvC3vcH8mN5i8f2Uo0j1JQFDFIzGeFZASbzxUmtbvtj6BrLo8bXaRUOyGKbeHVWu6Dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.3/lottie.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js"></script>
+
+<!-- type from left -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var typingSpan = document.querySelector('.typing-animation');
+    var text = typingSpan.innerHTML;
+    typingSpan.innerHTML = '';
+    var span = document.createElement('span');
+    typingSpan.appendChild(span);
+    var i = 0;
+    var timer = setInterval(function() {
+        span.innerHTML += text.charAt(i);
+        i++;
+        if (i > text.length) {
+            clearInterval(timer);
+        }
+    }, 100);
+});
+
+</script>
+
+<script>
+   // Add this code to your JavaScript file or in a script tag in the HTML file
+window.addEventListener("scroll", revealSections);
+
+function revealSections() {
+  var sections = document.querySelectorAll(".section");
+  for (var i = 0; i < sections.length; i++) {
+    var windowHeight = window.innerHeight;
+    var sectionTop = sections[i].getBoundingClientRect().top;
+    var sectionPoint = 150;
+
+    if (sectionTop < windowHeight - sectionPoint) {
+      sections[i].classList.add("active");
+    }
+  }
+}
+
+</script>
+
+
+<!-- lottie -->
+  <script>
+    // Load the animation
+    var animationContainer = document.getElementById('animation-container');
+    var animationData = {
+      container: animationContainer,
+      renderer: 'svg',
+      loop: true,
+      autoplay: true,
+      path: 'https://assets7.lottiefiles.com/packages/lf20_o9tuy0fs.json'
+    };
+
+    var animation = bodymovin.loadAnimation(animationData);
+  </script>
+
+<!-- lottie rocket -->
+<script>
+    // Initialize the Lottie animation
+    var animationContainer = document.getElementById('animation');
+    var animationData = {
+        container: animationContainer,
+        renderer: 'svg',
+        loop: true,
+        autoplay: true,
+        path: 'https://assets10.lottiefiles.com/packages/lf20_ftjuj8q2.json'
+    };
+    var animation = bodymovin.loadAnimation(animationData);
+</script>
+<!-- lotti responsive -->
+<script>
+    // Initialize the Lottie animation
+    var animationContainer = document.getElementById('animation2');
+    var animationData = {
+        container: animationContainer,
+        renderer: 'svg',
+        loop: true,
+        autoplay: true,
+        path: 'https://assets2.lottiefiles.com/packages/lf20_ti4y5deu.json'
+    };
+    var animation = bodymovin.loadAnimation(animationData);
+</script>
+<!-- lotti user-friendly -->
+<script>
+    // Initialize the Lottie animation
+    var animationContainer = document.getElementById('animation3');
+    var animationData = {
+        container: animationContainer,
+        renderer: 'svg',
+        loop: true,
+        autoplay: true,
+        path: 'https://assets10.lottiefiles.com/packages/lf20_7iccynsm.json'
+    };
+    var animation = bodymovin.loadAnimation(animationData);
+</script>
+<!-- lotti high quality content -->
+<script>
+    // Initialize the Lottie animation
+    var animationContainer = document.getElementById('animation4');
+    var animationData = {
+        container: animationContainer,
+        renderer: 'svg',
+        loop: true,
+        autoplay: true,
+        path: 'https://assets3.lottiefiles.com/packages/lf20_3ltxm7jt.json'
+    };
+    var animation = bodymovin.loadAnimation(animationData);
+</script>
+<!-- portfolio divs -->
+<script>
+    function showAllDivs() {
+        // Show all divs
+        $('.col-md-4').show();
+    }
+
+    function showDiv(divId) {
+        // Hide all divs
+        $('.col-md-4').hide();
+
+        // Split the divIds by comma
+        var ids = divId.split(',');
+
+        // Show the selected divs
+        ids.forEach(function(id) {
+            $('#' + id.trim()).show();
+        });
+    }
+</script>
+
+
+<!-- text blink -->
+<script>
+    // Create an Intersection Observer instance
+var observer = new IntersectionObserver(function(entries, observer) {
+  entries.forEach(function(entry) {
+    // Check if the target element is intersecting the viewport
+    if (entry.isIntersecting) {
+      // Add the "blink" class to the element
+      entry.target.classList.add('blink');
+      // Wait for 2 seconds and remove the "blink" class
+      setTimeout(function() {
+        entry.target.classList.remove('blink');
+      }, 1000);
+    }
+  });
+});
+
+// Select the element to observe
+var blinkText = document.getElementById('blink-text');
+
+// Start observing the element
+observer.observe(blinkText);
+
+</script>
+
+<!-- gototopbtn -->
+<script>
+// ===== Scroll to Top ==== 
+var btn = $('#button');
+
+$(window).scroll(function() {
+  if ($(window).scrollTop() > 300) {
+    btn.addClass('show');
+  } else {
+    btn.removeClass('show');
+  }
+});
+
+btn.on('click', function(e) {
+  e.preventDefault();
+  $('html, body').animate({scrollTop:0}, '300');
+});
+
+</script>
+
+</body>
+</html>
